@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <!--在网页的最后才引入js文件，能够加快网页的渲染效果-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap-responsive.css"/>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <title>Tab的使用</title>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="span3 well">
+        <ul class="nav-list unstyled">
+            <li class="nav-header">表头</li>
+            <li><a href="" tabindex="-1">主页</a></li>
+            <li>
+                <i class="icon-home"></i> 退出
+            </li>
+            <li class="divider"></li>
+            <li><a href="" tabindex="-1">主页</a></li>
+            <li><a href="" tabindex="-1">主页</a></li>
+        </ul>
+    </div>
+    <div class="span9">
+        <div class="tabbable span5">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#tab1" tabindex="-1" data-toggle="tab">首页</a></li>
+                <li><a href="#tab2" tabindex="-1" data-toggle="tab">首页</a></li>
+                <li><a href="#tab3" tabindex="-1" data-toggle="tab">首页</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        Dropdown<b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="active"><a href="">主页</a></li>
+                        <li><a href="">主页</a></li>
+                        <li><a href="">主页</a></li>
+                        <li><a href="">主页</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="tab1">
+                    <code>
+                        这个是一个helloWorldasd
+                    </code>
+                </div>
+                <div class="tab-pane" id="tab2">
+                    <code>
+                        这个是一个helloWorldasdasdaa
+                    </code>
+                </div>
+                <div class="tab-pane" id="tab3">
+                    <code>
+                        这个是一个helloWorldasdasd
+                    </code>
+                </div>
+            </div>
+        </div>
+        <div>
+            <!--<ul class="nav nav-pills span5">
+                <li class="active"><a href="" tabindex="-1">首页</a></li>
+                <li class="disabled"><a href="" tabindex="-1">首页</a></li>
+                <li><a href="" tabindex="-1">首页</a></li>
+            </ul>-->
+            <!--  <ul class="nav nav-pills nav-stacked">
+                  <li class="active"><a href="" tabindex="-1">首页</a></li>
+                  <li class="disabled"><a href="" tabindex="-1">首页</a></li>
+                  <li><a href="" tabindex="-1">首页</a></li>
+              </ul>-->
+            <!--堆叠式的-->
+            <ul class="nav nav-tabs nav-stacked span5">
+                <li class="active"><a href="" tabindex="-1">首页</a></li>
+                <li><a href="" tabindex="-1">首页</a></li>
+                <li><a href="" tabindex="-1">首页</a></li>
+                <li><a href="" tabindex="-1">首页</a></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

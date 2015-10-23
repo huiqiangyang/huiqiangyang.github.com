@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <!--在网页的最后才引入js文件，能够加快网页的渲染效果-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/bootstrap-responsive.css"/>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <title></title>
+</head>
+<body>
+<div class="container-fluid">
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="container">
+            <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+
+            <!-- Be sure to leave the brand out there if you want it shown -->
+            <a href="" class="brand"><img src="img/Musical%20Note-2.ico"/>　慧强杨</a>
+
+            <!-- Everything you want hidden at 940px or less, place within here -->
+            <div class="nav-collapse collapse">
+                <ul class="nav navbar">
+                    <li class="active"><a href="">首页</a></li>
+                    <li class="divider-vertical"></li>
+                    <li class=""><a href=""><i class="icon-search"></i> 邮件</a></li>
+                    <li class=""><a href="">首页</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+                            Dropdown<b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href=""><i class="icon-home"></i> 主页</a></li>
+                            <li><a href="">主页</a></li>
+                            <li><a href="">主页</a></li>
+                            <li><a href="">主页</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav pull-right">
+                    <div class="navbar-form">
+                        <input type="text" class="input-large search-query typeahead" placeholder="搜索"/>
+                        <!--输入提示-->
+                        <script>
+                            $(function () {
+                                $(".typeahead").typeahead({
+                                    //下拉列表显示的资源，数组的形式
+                                    source: ["ad", "asd", "asdas", "杨慧强", "姜宜君"],
+                                    //显示的最大数量
+                                    items: 8
+                                    //很有很多的参数见文档
+                                });
+                            });
+                        </script>
+                        <button class="btn"><i class="icon-search"></i> 搜索</button>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--信息的显示-->
+<div class="alert alert-success">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong>Warning!</strong> Best check yo self, you're not looking too good.
+</div>
+<div class="alert alert-success offset7 span3  navbar-fixed-top">
+    <a class="btn close" data-dismiss="alert">&times;</a>
+
+    <p><strong>警告</strong><br/><br/><b>&nbsp;&nbsp;&nbsp;&nbsp;你进行了非法操作！！！</b></p>
+</div>
+<!--照片的轮播-->
+<script>
+    $(function () {
+        $(".carousel").carousel({
+            interval: 2000
+        });
+    });
+</script>
+<div id="myCarousel" class="carousel slide">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+    </ol>
+    <!--carousel items-->
+    <div class="carousel-inner">
+        <div class="active item">
+            <img src="img/img1.jpg" width="100%" alt=""/>
+
+            <div class=" carousel-caption">
+                <h4>Second Thumbnail label</h4>
+
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at
+                    eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="img/img1.jpg" width="100%" alt=""/>
+        </div>
+        <div class="item"><img src="img/img2.jpg" width="100%" alt=""/></div>
+        <div class="item"><img src="img/img1.jpg" width="100%" alt=""/></div>
+        <div class="item"><img src="img/img1.jpg" width="100%" alt=""/></div>
+    </div>
+    <!--Carousel nav-->
+    <a href="#myCarousel" class="carousel-control left" data-slide="pre">&lsaquo;</a>
+    <a href="#myCarousel" class="carousel-control right" data-slide="next">&rsaquo;</a>
+</div>
+<!--面包屑-->
+<div>
+    <ul class="breadcrumb">
+        <li><a href="#">首页</a> <span class="divider">/</span></li>
+        <li><a href="#">Library</a> <span class="divider">/</span></li>
+        <li class="active">Data</li>
+    </ul>
+
+</div>
+<div class="hero-unit">
+    <h1>Heading</h1>
+
+    <p>窗外，夏季似乎还未离去。只有在一阵阵秋雨过后，才能闻到那股秋季的凉意。对于秋天，总有一种说不出的留恋，留念着秋天那份薄凉，留念着曾经的自己，留恋着曾经的许多人，许多事，留恋着那些已经回不到过去的旧时光。</p>
+
+    <p>
+        <a class="btn btn-primary btn-large">
+            Learn more
+        </a>
+    </p>
+</div>
+<div class="page-header">
+    <h3 class="text-center">Example page header
+        <small>Subtext for header</small>
+    </h3>
+    <!--媒体对象-->
+    <ul class="media-list">
+        <li class="media">
+            <a class="pull-left">
+                <img src="img/img1.jpg" class="media-object span4"/>
+            </a>
+
+            <div class="media-body offset4">
+                <h4 class="media-heading">MediaHeading</h4>
+
+                <p>窗外，夏季似乎还未离去。只有在一阵阵秋雨过后，才能闻到那股秋季的凉意。对于秋天，总有一种说不出的留恋，留念着秋天那份薄凉，留念着曾经的自己，留恋着曾经的许多人，许多事，留恋着那些已经回不到过去的旧时光。
+                </p>
+
+                <p> 思绪里，似乎闻到了桂花飘香的味道，依旧是那股泛着淡淡的暗香。脑海中浮现了当初那群带着青涩与单纯的少年，就是在这样的季节里相聚在一起，而后一起经过了数个春秋，在那段葱茏的时光里留下一点一滴的痕迹。
+                </p>
+            </div>
+        </li>
+        <hr class="bs-docs-separator"/>
+        <li class="media">
+            <a class="pull-left">
+                <img src="img/img1.jpg" class="media-object span4"/>
+            </a>
+
+            <div class="media-body offset4 ">
+                <h4 class="media-heading">MediaHeading</h4>
+
+                <p>窗外，夏季似乎还未离去。只有在一阵阵秋雨过后，才能闻到那股秋季的凉意。对于秋天，总有一种说不出的留恋，留念着秋天那份薄凉，留念着曾经的自己，留恋着曾经的许多人，许多事，留恋着那些已经回不到过去的旧时光。
+                </p>
+
+                <p> 思绪里，似乎闻到了桂花飘香的味道，依旧是那股泛着淡淡的暗香。脑海中浮现了当初那群带着青涩与单纯的少年，就是在这样的季节里相聚在一起，而后一起经过了数个春秋，在那段葱茏的时光里留下一点一滴的痕迹。
+                </p>
+            </div>
+        </li>
+    </ul>
+    <li class="media">
+        <a class="pull-left">
+            <img src="img/img1.jpg" class="media-object span4"/>
+        </a>
+        <!--muted改变页面元素的颜色为浅灰色-->
+        <div class="media-body offset4 muted">
+            <h4 class="media-heading">MediaHeading</h4>
+
+            <p>窗外，夏季似乎还未离去。只有在一阵阵秋雨过后，才能闻到那股秋季的凉意。对于秋天，总有一种说不出的留恋，留念着秋天那份薄凉，留念着曾经的自己，留恋着曾经的许多人，许多事，留恋着那些已经回不到过去的旧时光。
+            </p>
+
+            <p> 思绪里，似乎闻到了桂花飘香的味道，依旧是那股泛着淡淡的暗香。脑海中浮现了当初那群带着青涩与单纯的少年，就是在这样的季节里相聚在一起，而后一起经过了数个春秋，在那段葱茏的时光里留下一点一滴的痕迹。
+            </p>
+        </div>
+    </li>
+    <ul class="pager">
+        <li><a href="">上一页</a></li>
+        <li><a href="">下一页</a></li>
+    </ul>
+    <div class="well">
+        <h3>页面源代码</h3>
+        <hr class="bs-docs-separator"/>
+        <code>HTML say hello</code>
+    <pre>
+       public Class Test{
+            public static void main(String []args){
+                System.out.println("hello world");
+            }
+        }
+    </pre>
+    </div>
+    <div class="pagination pagination-centered">
+        <ul>
+            <li class="disabled"><a href="#"><<</a></li>
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">>></a></li>
+        </ul>
+    </div>
+</div>
+<table class="table table-bordered">
+    <caption>
+        HOW TO USE IT
+    </caption>
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>name</th>
+        <th>content</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="success">
+        <td>1</td>
+        <td>yanghuiqiang</td>
+        <td>THIS A GOOD BOY</td>
+    </tr>
+    <tr class="error">
+        <td>2</td>
+        <td>HUIQIANGYANG</td>
+        <td>PERFECT BOY LOVE</td>
+    </tr>
+    <tr class="error">
+        <td>3</td>
+        <td>HUIQIANGYANG</td>
+        <td>PERFECT BOY LOVE</td>
+    </tr>
+    <tr class="error">
+        <td>4</td>
+        <td>HUIQIANGYANG</td>
+        <td>PERFECT BOY LOVE</td>
+    </tr>
+    </tbody>
+</table>
+<!--进度条的显示-->
+<div class="progress progress-striped active">
+    <div class="bar bar-success" style="width: 70%"></div>
+</div>
+<!--图片的展示-->
+<div>
+    <ul class="thumbnails">
+        <li class="span4">
+            <a href="#" class="thumbnail">
+                <img src="img/img1.jpg" alt="">
+            </a>
+        </li>
+        <li class="span4">
+            <a href="#" class="thumbnail">
+                <img src="img/img1.jpg" alt="">
+            </a>
+        </li>
+        <li class="span4">
+            <a href="#" class="thumbnail">
+                <img src="img/img1.jpg" alt="">
+            </a>
+        </li>
+        <li class="span4">
+            <a href="#" class="thumbnail">
+                <img src="img/img1.jpg" alt="">
+            </a>
+        </li>
+    </ul>
+</div>
+<!--对话框实例-->
+<!--通过一个链接链接到对话框-->
+<!--写dataTarget 或者href就可以打开对话框-->
+<a href="#myModal" class="btn" data-toggle="modal">查看演示案例</a>
+
+<!-- Modal -->
+<div id="myModal" class="modal hide fade" tabindex="-1" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Modal header</h3>
+    </div>
+    <div class="modal-body">
+        <p>One fine body…</p>
+
+        <p>子对话框</p>
+        <a href="#sonModal" class="btn-info" data-toggle="modal">点我啊</a>
+
+        <div class="modal hide fade span2" id="sonModal">
+            <div class="modal-header">
+                <h3>子弹窗</h3>
+            </div>
+            <div class="modal-body">
+                <p>我就是自弹出的啊</p>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+        <button class="btn btn-primary">Save changes</button>
+    </div>
+</div>
+<span class="badge badge-success">3</span>
+<!--页脚的显示-->
+<div class="footer">
+    <div class="container-fluid">
+        <p>友情连接</p>
+        <ul>
+            <li>https://huiqiangyang.github.io</li>
+        </ul>
+    </div>
+</div>
+</div>
+<script>
+    $(function () {
+//        $('body').off('.data-api');
+
+    });
+</script>
+</body>
+</html>

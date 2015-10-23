@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title></title>
+    <meta charset="UTF-8">
+    <script src="js/jquery.min.js"></script>
+    <script>
+        function fun() {
+            $("#right").append($("#left").children());
+
+        }
+    </script>
+</head>
+<body>
+<div>
+    <select id="left" multiple="true" size="5" style="width: 310px">
+        <option value=1">2</option>
+        <option value=1">2</option>
+        <option value=1">2</option>
+    </select>
+    <button onclick="fun()">优异</button>
+    <select id="right" multiple="true" size="5" style="width: 310px">
+        <option value=1">2</option>
+        <option value=1">2</option>
+        <option value=1">2</option>
+    </select>
+</div>
+
+</body>
+</html>

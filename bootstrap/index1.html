@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <!--在网页的最后才引入js文件，能够加快网页的渲染效果-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap-responsive.css"/>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <title>栅格系统</title>
+</head>
+<body>
+<!--使用流式布局-->
+<div class="container-fluid">
+<div class="row-fluid">
+<div class="span3">
+    这个是左侧的界面
+</div>
+<div class="span9">
+<div class="row">
+    <div class="span4">
+        这个是span4
+    </div>
+    <!--列表的偏移-->
+    <div class="span5 offset3">
+        这个是span8
+    </div>
+</div>
+<!--列的嵌套-->
+<div class="row">
+    <div class="span8">
+        <div class="row">
+            <!--内嵌在里面的时候就不是12了-->
+            <div class="span8">
+                <p>
+                    <!--strong加粗-->
+                    <!--em 斜体-->
+                    <!--abbr 实现的效果是：鼠标移动到上面的时候，显示title的内容-->
+                    <!--address 实现换行的效果-->
+                <h4>强调文字的例子</h4>
+                <strong>李宗苗</strong>：车辆年检，<abbr
+                    title="全深圳300万辆，年收5.85亿元企业不年检，公司倒闭如潮怎么办？德国人答：你看德国是这样的吗？我问：">195元/辆</abbr>
+                <em>杨佩昌</em>：
+                <address>在德国，汽车</address>
+                、公司都无需年检。我问德国人：汽车不年检，坏了怎么办？
+                答：自己修车。问：企业不年检，公司倒闭如潮怎么办？德国人答：你看德国是这样的吗？我问：德国政府为何不强制年检？德国人反问：谁给了政府这个权力？如果政府对年检感兴趣，说明这种事对它有好处。
+                </p>
+            </div>
+            <div class="span4">
+                <a href="" class="btn btn-success">span4</a>
+            </div>
+        </div>
+    </div>
+    <div class="span4">
+        span4
+    </div>
+</div>
+<!--流式栅格系统,他的容器也必须是流式的-->
+<div class="row-fluid">
+    <div class="span4">
+        这个是流式栅格系统，40%
+    </div>
+    <dvi class="span8">
+        这个流式栅格系统占了80%
+    </dvi>
+</div>
+<div>
+    <!--实现引用效果-->
+    <blockquote class="pull-right">
+        <p>一天吃六个胶囊，一天三次、一次两个，没有吃掉多少铬。</p>
+        <small>卫生部合理用药专家孙忠实</small>
+    </blockquote>
+    <ul class="unstyled well">
+        <li>今天是一个好天气啊</li>
+        <li>今天是一个好天气啊</li>
+        <li>今天是一个好天气啊</li>
+        <li>今天是一个好天气啊</li>
+    </ul>
+    <ol>
+        <li>今天是一个好天气啊</li>
+        <li>今天是一个好天气啊</li>
+        <li>今天是一个好天气啊</li>
+        <li>今天是一个好天气啊</li>
+    </ol>
+    <!--代码的显示-->
+    <code class="pull-right">
+        System.out.println("helloworld")；
+    </code>
+    <!--代码块-->
+                <pre class="pre-scrollable">
+                    System.out.println("helloworld")；
+                    System.out.println("helloworld")；
+                    System.out.println("helloworld")；
+                    System.out.println("helloworld")；
+                </pre>
+</div>
+<!--表格的使用-->
+<table class="table table-bordered">
+    <thead>
+    <td>标题一</td>
+    <td>标题二</td>
+    <tr>
+        <td>内容一</td>
+        <td>内容一</td>
+    </tr>
+    <tr>
+        <td>内容一</td>
+        <td>内容一</td>
+    </tr>
+    </thead>
+</table>
+<!--表单-->
+<div>
+    <form>
+        <input type="text" class="search-query input-large">
+        <button class="btn btn-success">搜索</button>
+        <label>标签的名称</label>
+        <input type="text" class="form-search input-large" placeholder="请输入姓名"/>
+
+        <p class="help-block">帮助说明</p>
+        <input type="password" class="form-search input-large" placeholder="请输入密码"/>
+
+        <p class="help-block">帮助说明</p>
+        <label for="checkbox" class="checkbox">
+            <input id="checkbox" type="checkbox" class="input-large"/>记住我
+        </label>
+        <input type="submit" class="btn btn-success span2" onsubmit="" value="登录"/>
+        <input type="reset" class="btn btn-info  span2" onsubmit="" value="重置"/>
+
+    </form>
+</div>
+
+<!--标记控件组-->
+<form action="" class="form-horizontal span5">
+    <fieldset>
+        <legend>个人资料</legend>
+        <div class="control-group">
+            <label for="input01" class="control-label">我的姓名</label>
+
+            <div class="controls">
+                <input id="input01" type="text" class="input-prepend" placeholder="我的姓名"/>
+
+                <p class="help-inline">必须是汉字</p>
+            </div>
+            <label for="input02" class="control-label">我的生日</label>
+
+            <div class="controls">
+                <input id="input02" type="text" class="input-prepend" placeholder="我的生日"/>
+
+                <p class="help-inline">年龄要大于20岁</p>
+            </div>
+        </div>
+        <legend>用户详情</legend>
+        <div class="control-group">
+            <label for="input03" class="control-label">输入您邮箱</label>
+
+            <div class="controls">
+                <input id="input03" type="text" class="input-append" placeholder="输入邮箱地址"/>
+
+                <p class="help-inline">输入的邮箱地址必须合法</p>
+            </div>
+            <div class="controls">
+                <label for="fileup" class="control-label">文件上传</label>
+                <controls>
+                    <input id="fileup" type="file" class="input-append"/>
+                </controls>
+            </div>
+        </div>
+        <legend>表单控件状态</legend>
+        <div class="control-group success">
+            <label for="input04" class="control-label">获得焦点的输入框</label>
+
+            <div class="controls">
+                <input id="input04" type="text" class=" input-append" placeholder="获得焦点" autofocus required/>
+                <span class="help-inline">获得焦点</span>
+            </div>
+            <label for="input05" class="control-label">不可编辑</label>
+
+            <div class="controls">
+                <input id="input05" type="text" class="input-append uneditable-input"/>
+                <span class="add-on">Google</span>
+            </div>
+        </div>
+    </fieldset>
+</form>
+
+<div class="row">
+    <!--button 讲解-->
+    <div class="span6">
+        <a href="javascript:;" class="btn disabled">Google地球</a>
+        <a href="" class="btn btn-info">Google地球</a>
+        <a href="" class="btn btn-success">Google地球</a>
+        <a href="" class="btn btn-primary btn-large">Google地球</a>
+        <a href="" class="btn btn-primary btn-small">Google地球</a>
+    </div>
+    <!--icons讲解-->
+    <div class="span6">
+        <input type="text" class="search-query" placeholder="搜索"/>
+        <button class="btn btn-success"><i class="icon-search icon-white"></i> 搜索</button>
+        <button class="btn btn-success"><i class="icon-refresh"></i> 刷新</button>
+        <button class="btn btn-success"><i class="icon-home"></i> 首页</button>
+    </div>
+</div>
+<!--按钮组件深入讲解-->
+<div class="btn-toolbar">
+    <div class="btn-group">
+        <a class="btn btn-primary">首页</a>
+        <a class="btn"> 首页</a>
+        <a class="btn"> 首页</a>
+        <a class="btn"> 首页</a>
+    </div>
+    <!--下拉菜单-->
+    <div class="btn-group dropdown">
+        <a class="btn">Action</a>
+        <a class="btn dropdown-toggle" data-toggle="dropdown">
+            <span class="caret">
+            </span>
+        </a>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+            <li><a href="#"><i class="icon-home"></i> Action</a></li>
+            <li><a tabindex="-1" href="#"><i class="icon-adjust"></i> Another action</a></li>
+            <li><a tabindex="-1" href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a tabindex="-1" href="#">Separated link</a></li>
+        </ul>
+    </div>
+    <div class="btn-group dropup">
+        <!--向上弹出菜单-->
+        <a class="btn btn-success">向上弹</a>
+        <a class="btn btn-success dropup" data-toggle="dropdown">
+            <span class="caret">
+
+            </span>
+        </a>
+        <ul class="dropdown-menu">
+            <li><a href="">Index</a></li>
+            <li><a href="">Home</a></li>
+            <li class="divider"></li>
+            <li><a href="">Home</a></li>
+        </ul>
+
+    </div>
+    <!--tabs的使用-->
+
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
