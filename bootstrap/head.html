@@ -3,16 +3,13 @@
 <head lang="en">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-    <!--在网页的最后才引入js文件，能够加快网页的渲染效果-->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.js"></script>
     <link rel="stylesheet" href="css/bootstrap-responsive.css"/>
     <link rel="stylesheet" href="css/bootstrap.css"/>
     <title></title>
 </head>
 <body>
 <div class="container-fluid">
-<div class="navbar">
+<div class="navbar navbar-static-top">
     <div class="navbar-inner">
         <div class="container">
             <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
@@ -66,22 +63,38 @@
         </div>
     </div>
 </div>
+<div class="row-fluid">
+<div class="span3 bs-docs-sidebar">
+    <ul class="nav nav-list bs-docs-sidenav affix-top">
+        <li class="active"><a href="#overview"><i class="icon-chevron-right"></i> 概览</a></li>
+        <li><a href="#overview"><i class="icon-chevron-right"></i> 概览</a></li>
+        <li><a href="#overview"><i class="icon-chevron-right"></i> 概览</a></li>
+        <li><a href="#overview"><i class="icon-chevron-right"></i> 概览</a></li>
+        <li><a href="#overview"><i class="icon-chevron-right"></i> 概览</a></li>
+        <li><a href="#overview"><i class="icon-chevron-right"></i> 概览</a></li>
+        <li><a href="#overview"><i class="icon-chevron-right"></i> 概览</a></li>
+        <li><a href="#overview"><i class="icon-chevron-right"></i> 概览</a></li>
+        <li><a href="#overview"><i class="icon-chevron-right"></i> 概览</a></li>
+    </ul>
 
+</div>
+<div class="span9">
 <!--信息的显示-->
 <div class="alert alert-success">
     <button type="button" class="close" data-dismiss="alert">&times;</button>
     <strong>Warning!</strong> Best check yo self, you're not looking too good.
 </div>
-<div class="alert alert-success offset7 span3  navbar-fixed-top">
+<div class="alert alert-success span3 offset9  navbar-fixed-bottom">
     <a class="btn close" data-dismiss="alert">&times;</a>
 
     <p><strong>警告</strong><br/><br/><b>&nbsp;&nbsp;&nbsp;&nbsp;你进行了非法操作！！！</b></p>
 </div>
+
 <!--照片的轮播-->
 <script>
     $(function () {
         $(".carousel").carousel({
-            interval: 2000
+            interval: 5000
         });
     });
 </script>
@@ -96,7 +109,7 @@
     <!--carousel items-->
     <div class="carousel-inner">
         <div class="active item">
-            <img src="img/img1.jpg" width="100%" alt=""/>
+            <img src="img/img1.jpg" class="img-rounded" width="100%" alt=""/>
 
             <div class=" carousel-caption">
                 <h4>Second Thumbnail label</h4>
@@ -143,11 +156,11 @@
     <!--媒体对象-->
     <ul class="media-list">
         <li class="media">
-            <a class="pull-left">
-                <img src="img/img1.jpg" class="media-object span4"/>
+            <a class="pull-left span3">
+                <img src="img/img1.jpg" class="media-object"/>
             </a>
 
-            <div class="media-body offset4">
+            <div class="media-body offset3">
                 <h4 class="media-heading">MediaHeading</h4>
 
                 <p>窗外，夏季似乎还未离去。只有在一阵阵秋雨过后，才能闻到那股秋季的凉意。对于秋天，总有一种说不出的留恋，留念着秋天那份薄凉，留念着曾经的自己，留恋着曾经的许多人，许多事，留恋着那些已经回不到过去的旧时光。
@@ -159,11 +172,11 @@
         </li>
         <hr class="bs-docs-separator"/>
         <li class="media">
-            <a class="pull-left">
-                <img src="img/img1.jpg" class="media-object span4"/>
+            <a class="pull-left span3">
+                <img src="img/img1.jpg" class="media-object"/>
             </a>
 
-            <div class="media-body offset4 ">
+            <div class="media-body offset3">
                 <h4 class="media-heading">MediaHeading</h4>
 
                 <p>窗外，夏季似乎还未离去。只有在一阵阵秋雨过后，才能闻到那股秋季的凉意。对于秋天，总有一种说不出的留恋，留念着秋天那份薄凉，留念着曾经的自己，留恋着曾经的许多人，许多事，留恋着那些已经回不到过去的旧时光。
@@ -173,22 +186,25 @@
                 </p>
             </div>
         </li>
+        <hr class="bs-docs-separator"/>
+        <li class="media">
+            <a class="pull-left span3">
+                <img src="img/img1.jpg" class="media-object"/>
+            </a>
+
+            <div class="media-body offset3 muted">
+                <h4 class="media-heading">MediaHeading</h4>
+
+                <p>窗外，夏季似乎还未离去。只有在一阵阵秋雨过后，才能闻到那股秋季的凉意。对于秋天，总有一种说不出的留恋，留念着秋天那份薄凉，留念着曾经的自己，留恋着曾经的许多人，许多事，留恋着那些已经回不到过去的旧时光。
+                </p>
+
+                <p> 思绪里，似乎闻到了桂花飘香的味道，依旧是那股泛着淡淡的暗香。脑海中浮现了当初那群带着青涩与单纯的少年，就是在这样的季节里相聚在一起，而后一起经过了数个春秋，在那段葱茏的时光里留下一点一滴的痕迹。
+                </p>
+            </div>
+        </li>
+        <hr class="bs-docs-separator"/>
     </ul>
-    <li class="media">
-        <a class="pull-left">
-            <img src="img/img1.jpg" class="media-object span4"/>
-        </a>
-        <!--muted改变页面元素的颜色为浅灰色-->
-        <div class="media-body offset4 muted">
-            <h4 class="media-heading">MediaHeading</h4>
 
-            <p>窗外，夏季似乎还未离去。只有在一阵阵秋雨过后，才能闻到那股秋季的凉意。对于秋天，总有一种说不出的留恋，留念着秋天那份薄凉，留念着曾经的自己，留恋着曾经的许多人，许多事，留恋着那些已经回不到过去的旧时光。
-            </p>
-
-            <p> 思绪里，似乎闻到了桂花飘香的味道，依旧是那股泛着淡淡的暗香。脑海中浮现了当初那群带着青涩与单纯的少年，就是在这样的季节里相聚在一起，而后一起经过了数个春秋，在那段葱茏的时光里留下一点一滴的痕迹。
-            </p>
-        </div>
-    </li>
     <ul class="pager">
         <li><a href="">上一页</a></li>
         <li><a href="">下一页</a></li>
@@ -312,8 +328,12 @@
     </div>
 </div>
 <span class="badge badge-success">3</span>
+</div>
+</div>
+
 <!--页脚的显示-->
-<div class="footer">
+<div class="muted">
+    <hr class="bs-docs-separator"/>
     <div class="container-fluid">
         <p>友情连接</p>
         <ul>
@@ -326,6 +346,17 @@
     $(function () {
 //        $('body').off('.data-api');
 
+    });
+</script>
+<!--在网页的最后才引入js文件，能够加快网页的渲染效果-->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/scrollgress.js"></script>
+<script>
+    <!--
+    页面的加载进度-->
+    $(function () {
+        $('body').scrollgress();
     });
 </script>
 </body>
